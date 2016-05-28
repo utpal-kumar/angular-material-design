@@ -50,7 +50,8 @@
                 <p>{{selected.content}}</p> 
             </md-content>
 
-            <md-sidenav md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2">
+
+            <md-content flex layout="column" id="content1">
                 <md-table-container>
                     <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
                         <thead md-head md-order="query.order">
@@ -71,50 +72,8 @@
                 </md-table-container>
 
                 <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{users.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
-                </md-sidenav>
-
-            <!--<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-                <md-toolbar class="md-theme-light">
-                    <h1 class="md-toolbar-tools">Sidenav Right</h1>
-                </md-toolbar>
-                <md-content ng-controller="RightCtrl" layout-padding>
-                    <form>
-                        <md-input-container>
-                            <label for="testInput">Test input</label>
-                            <input type="text" id="testInput"
-                                   ng-model="data" md-autofocus>
-                        </md-input-container>
-                    </form>
-                    <md-button ng-click="close()" class="md-primary">
-                        Close Sidenav Right
-                    </md-button>
-                </md-content>
-            </md-sidenav>-->
-
-            <!--<md-sidenav md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2">
-
-                <md-table-container>
-                    <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
-                        <thead md-head md-order="query.order">
-                            <tr md-row>
-                                <th md-column md-order-by="nameToLower"><span>Avatar</span></th>
-                                <th md-column md-numeric"><span>Name</span></th>
-                                <th md-column md-numeric>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody md-body>
-                            <tr md-row ng-repeat="user in users">
-                                <td md-cell><md-icon md-svg-icon="{{user.avatar}}" class="avatar"></md-icon></td>
-                                <td md-cell>{{user.name}}</td>
-                                <td md-cell>{{user.content}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </md-table-container>
-
-                <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{users.count}}" md-on-paginate="getDesserts" md-page-select></md-table-pagination>
-            </md-sidenav>-->
-        </div>
+            </md-content>              
+</div>
 
 
 
